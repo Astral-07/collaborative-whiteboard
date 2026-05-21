@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: collaborative-whiteboard
+
+  websocket:
+    message-buffer-size: 8192
+
+logging:
+  level:
+    com.whiteboard: DEBUG
+    org.springframework.web.socket: DEBUG

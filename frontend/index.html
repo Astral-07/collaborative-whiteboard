@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaborative Whiteboard</title>
+    <script>
+      // Polyfill 'global' for libraries like sockjs-client
+      if (typeof global === 'undefined') {
+        window.global = window;
+      }
+    </script>
+    <style>
+      #root:empty::before {
+        content: "Loading...";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: system-ui, sans-serif;
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding:40px;text-align:center;font-family:system-ui,sans-serif;">
+        <h2>JavaScript Required</h2>
+        <p>This app requires JavaScript to run. Please enable it in your browser settings.</p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
