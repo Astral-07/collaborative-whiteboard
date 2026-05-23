@@ -13,7 +13,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/rooms")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {"https://collaborative-whiteboard-eosin-one.vercel.app/", "http://localhost:3000"})
 public class RoomRestController {
 
     private final RoomService roomService;
